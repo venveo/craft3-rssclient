@@ -13,6 +13,7 @@ namespace venveo\rssclient\variables;
 use venveo\rssclient\RSSClient;
 
 use Craft;
+use venveo\rssclient\services\RSSFeedService;
 
 /**
  * @author    Venveo
@@ -28,12 +29,10 @@ class RSSClientVariable
      * @param null $optional
      * @return string
      */
-    public function exampleVariable($optional = null)
+    public function getFeed($url, $auth = null)
     {
-        $result = "And away we go to the Twig template...";
-        if ($optional) {
-            $result = "I'm feeling optional today...";
-        }
-        return $result;
+        /** @var RSSFeedService $service */
+        $service = RSSClient::getInstance()->rssfeed;
+        return $service->fetch($url, $auth);
     }
 }

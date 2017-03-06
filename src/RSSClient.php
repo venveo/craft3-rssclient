@@ -17,6 +17,8 @@ use craft\base\Plugin;
 use craft\services\Plugins;
 use craft\events\PluginEvent;
 
+use yii\base\Event;
+
 /**
  * @author    Venveo
  * @package   RSSClient
@@ -52,8 +54,11 @@ class RSSClient extends Plugin
                 }
             }
         );
+        $this->setComponents([
+            'rssfeed' => services\RSSFeedService::class,
+        ]);
 
-        Craft::info('RSSClient ' . Craft::t('rSSClient', 'plugin loaded'), __METHOD__);
+
     }
 
     /**

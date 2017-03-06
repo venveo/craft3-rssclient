@@ -14,6 +14,7 @@ use venveo\rssclient\RSSClient;
 
 use Craft;
 use craft\base\Component;
+use GuzzleHttp\Client;
 
 /**
  * @author    Venveo
@@ -25,13 +26,33 @@ class RSSFeedService extends Component
     // Public Methods
     // =========================================================================
 
-    /*
-     * @return mixed
+    /**
+     * @param $feedUrl string
+     * @param null $auth
+     *
+     * @return bool|\SimpleXMLElement
      */
-    public function exampleService()
-    {
-        $result = 'something';
+    public function fetch($feedUrl, $auth = null) {
 
-        return $result;
+        $response = $this->dispatchRequest($feedUrl, $auth);
+
+        if ($data = @simplexml_load_string($response, null, LIBXML_NOCDATA))
+        {
+            return $data;
+        }
+        else
+        {
+            return false;
+        }
+    }
+
+    private function dispatchRequest($host, $auth = null) {
+        /** @var Client $client */
+        $client = new Client();
+        $res = $client->request('GET', $host, [
+            'headers' => ['Accept' => ['application/rss+xml', 'application/rdf+xml', 'application/xml', 'text/xml']]
+        ]);
+
+        return $res->getBody();
     }
 }
