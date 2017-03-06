@@ -1,0 +1,43 @@
+{
+    "name": "venveo/r-s-s-client",
+    "description": "Just a simple RSS client",
+    "type": "craft-plugin",
+    "version": "1.0.0",
+    "keywords": [
+        "craft",
+        "cms",
+        "craftcms",
+        "craft-plugin",
+        "rssclient"
+    ],
+    "support": {
+        "docs": "https://github.com/venveo/r-s-s-client/blob/master/README.md",
+        "issues": "https://github.com/venveo/r-s-s-client/issues"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Venveo",
+            "homepage": "https://venveo.com"
+        }
+    ],
+    "require": {
+    },
+    "autoload": {
+        "psr-4": {
+          "venveo\\rssclient\\": "src/"
+        }
+    },
+    "extra": {
+        "name": "RSSClient",
+        "handle": "rSSClient",
+        "schemaVersion": "1.0.0",
+        "hasSettings": false,
+        "hasCpSection": false,
+        "changelogUrl": "https://raw.githubusercontent.com/venveo/r-s-s-client/master/CHANGELOG.md",
+        "components": {
+            "rSSFeedService": "venveo\\rssclient\\services\\RSSFeedService"
+        },
+        "class": "venveo\\rssclient\\RSSClient"
+    }
+}
