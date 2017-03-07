@@ -26,3 +26,11 @@ This plugin exposes a service variable called `rssfeed` with a function called `
     {{ joke.summary | raw }}
 {% endfor %}
 ```
+
+## Todo
+1. Caching mechanism to prevent extraneous http requests from Guzzle
+2. Synchronizing with entry type via channel
+3. Cleaner/easier pagination
+
+## Credits
+mattstein for his original [Craft 2 implementation](https://github.com/workingconcept/craft-feeder) which this project follows very closely.
