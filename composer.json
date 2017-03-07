@@ -11,8 +11,8 @@
         "rssclient"
     ],
     "support": {
-        "docs": "https://github.com/venveo/Craft3RSSFeed/blob/master/README.md",
-        "issues": "https://github.com/venveo/Craft3RSSFeed/issues"
+        "docs": "https://github.com/venveo/craft3-RSSFeed/blob/master/README.md",
+        "issues": "https://github.com/venveo/craft3-RSSFeed/issues"
     },
     "license": "MIT",
     "authors": [
@@ -35,7 +35,7 @@
         "schemaVersion": "1.0.0",
         "hasSettings": false,
         "hasCpSection": false,
-        "changelogUrl": "https://raw.githubusercontent.com/venveo/r-s-s-client/master/CHANGELOG.md",
+        "changelogUrl": "https://raw.githubusercontent.com/venveo/craft3-RSSFeed/master/CHANGELOG.md",
         "components": {
             "rSSFeedService": "venveo\\rssclient\\services\\RSSFeedService"
         },
