@@ -33,4 +33,4 @@ This plugin exposes a service variable called `rssfeed` with a function called `
 3. Cleaner/easier pagination
 
 ## Credits
-mattstein for his original [Craft 2 implementation](https://github.com/workingconcept/craft-feeder) which this project follows very closely.
+[mattstein](https://github.com/mattstein) for his original [Craft 2 implementation](https://github.com/workingconcept/craft-feeder) which this project follows very closely.
