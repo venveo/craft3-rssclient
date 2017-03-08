@@ -28,9 +28,13 @@ This plugin exposes a service variable called `rssfeed` with a function called `
 ```
 
 ## Todo
-1. Caching mechanism to prevent extraneous http requests from Guzzle
-2. Synchronizing with entry type via channel
-3. Cleaner/easier pagination
+- Caching mechanism to prevent extraneous http requests from Guzzle
+- Synchronizing with entry type via channel
+- Cleaner/easier pagination
+- More comprehensive error logging
+
+## Contributing
+Contributions are encouraged, please ensure your commits are descriptive and start with a verb. Create a pull-request of your feature branch onto the master branch. When your PR is approved and merged, a Venveo team member will tag, update the changelog, and create a new release.
 
 ## Credits
 [mattstein](https://github.com/mattstein) for his original [Craft 2 implementation](https://github.com/workingconcept/craft-feeder) which this project follows very closely.

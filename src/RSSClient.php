@@ -45,15 +45,6 @@ class RSSClient extends Plugin
         parent::init();
         self::$plugin = $this;
 
-        Event::on(
-            Plugins::className(),
-            Plugins::EVENT_AFTER_INSTALL_PLUGIN,
-            function (PluginEvent $event) {
-                if ($event->plugin === $this) {
-                    // We were just installed
-                }
-            }
-        );
         $this->setComponents([
             'rssfeed' => services\RSSFeedService::class,
         ]);
